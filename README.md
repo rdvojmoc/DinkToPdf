@@ -9,3 +9,5 @@ Library can be installed through Nuget. Run command bellow from the package mana
 PM> Install-Package DinkToPdf
 ```
 
+More to follow...
+
