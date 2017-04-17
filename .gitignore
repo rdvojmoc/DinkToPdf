@@ -1,0 +1,10 @@
+src/DinkToPdf/bin/
+src/DinkToPdf/obj/
+src/DinkToPfd.ConsoleApp/obj/
+src/DinkToPfd.ConsoleApp/bin/
+src/DinkToPdf.ThreadSafe/bin/Debug/netcoreapp1.0/DinkToPdf.ThreadSafe.runtimeconfig.json
+src/DinkToPdf.ThreadSafe/bin/Release/PublishOutput/DinkToPdf.ThreadSafe.deps.json
+src/DinkToPdf.ThreadSafe/bin/
+src/DinkToPdf.ThreadSafe/Properties/
+src/DinkToPdf.ThreadSafe/Files/
+src/DinkToPdf.ThreadSafe/obj/
