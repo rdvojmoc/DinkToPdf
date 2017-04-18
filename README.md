@@ -10,7 +10,7 @@ PM> Install-Package DinkToPdf
 ```
 
 ### IMPORTANT
-Library was NOT tested with IIS. Library was tested in console applications and with Kesterl web server. 
+Library was NOT tested with IIS. Library was tested in console applications and with Kestrel web server both for Web Application and Web API . 
 
 ### 
 
@@ -79,3 +79,13 @@ var doc = new HtmlToPdfDocument()
 _converter.Convert(doc);
 ```
 
+### Dependancy injection
+Register converter as singleton.
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    // Add converter to DI
+    services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+}
+```
