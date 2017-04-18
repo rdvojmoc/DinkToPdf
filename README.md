@@ -15,7 +15,13 @@ Use this converter in single threaded applications.
 Create converter:
 ```csharp
 var converter = new BasicConverter(new PdfTools());
-});
+```
+
+### Synchronized converter
+Use this converter in multi threaded applications and web servers. Conversion tasks are saved to blocking collection and executed on a single thread.
+
+```csharp
+var converter = new BasicConverter(new PdfTools());
 ```
 
 ### Define document to convert:
