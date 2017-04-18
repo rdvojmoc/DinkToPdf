@@ -1,8 +1,10 @@
 {
-  "version": "1.0.7-*",
+  "version": "1.0.8-*",
 
   "buildOptions": {
-    "allowUnsafe": true
+    "allowUnsafe": true,
+    "xmlDoc": true,
+    "nowarn": [ "1591" ]
   },
 
   "dependencies": {
@@ -21,6 +23,21 @@
       }
     }
   },
+
+  "packOptions": {
+    "files": {
+      "mappings": {
+        "lib/netstandard1.6/": {
+          "includeFiles": [
+            "bin/Debug/netstandard1.6/DinkToPdf.pdb",
+            "bin/Debug/netstandard1.6/DinkToPdf.xml",
+            "bin/Debug/netstandard1.6/DinkToPdf.dll"
+          ]
+        }
+      }
+    }
+  },
+
 
   "scripts": {
     "postcompile": [ "dotnet pack --no-build --configuration %compile:Configuration%" ]

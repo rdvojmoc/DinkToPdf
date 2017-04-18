@@ -8,3 +8,17 @@ src/DinkToPdf.ThreadSafe/bin/
 src/DinkToPdf.ThreadSafe/Properties/
 src/DinkToPdf.ThreadSafe/Files/
 src/DinkToPdf.ThreadSafe/obj/
+DinkToPdf.TestWebServer/bin/
+DinkToPdf.TestWebServer/obj/
+DinkToPfd.TestConsoleApp/Files/636281092862553384.pdf
+DinkToPfd.TestConsoleApp/bin/Debug/
+DinkToPfd.TestConsoleApp/libwkhtmltox.so
+DinkToPfd.TestConsoleApp/obj/
+DinkToPdf.TestWebServer/libwkhtmltox.so
+DinkToPdf.TestWebServer/libwkhtmltox.dylib
+DinkToPdf.TestThreadSafe/obj/
+DinkToPdf.TestThreadSafe/bin/
+DinkToPdf.TestThreadSafe/Files/
+DinkToPdf.TestThreadSafe/Properties/
+DinkToPdf.TestThreadSafe/libwkhtmltox.so
+DinkToPfd.TestConsoleApp/Files/

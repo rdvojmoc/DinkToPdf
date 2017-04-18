@@ -198,5 +198,11 @@ namespace DinkToPdf
                 return margins.GetMarginValue(margins.Bottom);
             }
         }
+
+        /// <summary>
+        /// Set viewport size. Not supported in wkhtmltopdf API since v0.12.2.4 
+        /// </summary>
+        [WkHtml("viewportSize")]
+        public string ViewportSize { get; set; }
     }
 }
