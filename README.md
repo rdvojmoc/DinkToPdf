@@ -9,6 +9,8 @@ Library can be installed through Nuget. Run command bellow from the package mana
 PM> Install-Package DinkToPdf
 ```
 
+### 
+
 ### Basic converter
 Use this converter in single threaded applications.
 
@@ -21,10 +23,10 @@ var converter = new BasicConverter(new PdfTools());
 Use this converter in multi threaded applications and web servers. Conversion tasks are saved to blocking collection and executed on a single thread.
 
 ```csharp
-var converter = new BasicConverter(new PdfTools());
+var converter = new SynchronizedConverter(new PdfTools());
 ```
 
-### Define document to convert:
+### Define document to convert
 ```csharp
 var doc = new HtmlToPdfDocument()
 {
@@ -43,5 +45,34 @@ var doc = new HtmlToPdfDocument()
     }
 };
 
+```
+
+### Convert
+If Out property is empty string (defined in GlobalSettings) result is saved in byte array. 
+```csharp
+byte[] pdf = _converter.Convert(doc);
+```
+
+If Out property is defined in document then file is saved to disk:
+```csharp
+var doc = new HtmlToPdfDocument()
+{
+    GlobalSettings = {
+        ColorMode = ColorMode.Color,
+        Orientation = Orientation.Portrait,
+        PaperSize = PaperKind.A4,
+        Margins = new MarginSettings() { Top = 10 },
+        Out = @"C:\DinkToPdf\src\DinkToPdf.TestThreadSafe\test.pdf",
+    },
+    Objects = {
+        new ObjectSettings()
+        {
+            Page = "http://google.com/",
+        },
+    }
+};
+```
+```csharp
+_converter.Convert(doc);
 ```
 
