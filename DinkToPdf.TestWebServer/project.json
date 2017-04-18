@@ -17,7 +17,7 @@
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
     "Autofac": "4.0.0-rc3-293",
     "Autofac.Extensions.DependencyInjection": "4.0.0-rc3-280",
-    "DinkToPdf": "1.0.7"
+    "DinkToPdf": "1.0.8"
   },
 
   "tools": {

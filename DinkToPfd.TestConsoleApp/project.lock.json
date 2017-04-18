@@ -2163,7 +2163,7 @@
           "lib/netstandard1.3/_._": {}
         }
       },
-      "DinkToPdf/1.0.7": {
+      "DinkToPdf/1.0.8": {
         "type": "project",
         "framework": ".NETStandard,Version=v1.6",
         "dependencies": {
@@ -6985,7 +6985,7 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "DinkToPdf/1.0.7": {
+    "DinkToPdf/1.0.8": {
       "type": "project",
       "path": "../src/DinkToPdf/project.json",
       "msbuildProject": "../src/DinkToPdf/DinkToPdf.xproj"
@@ -6993,7 +6993,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "DinkToPdf >= 1.0.7",
+      "DinkToPdf >= 1.0.8",
       "Microsoft.NETCore.App >= 1.1.0"
     ],
     ".NETCoreApp,Version=v1.1": []
