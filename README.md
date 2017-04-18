@@ -9,6 +9,9 @@ Library can be installed through Nuget. Run command bellow from the package mana
 PM> Install-Package DinkToPdf
 ```
 
+### IMPORTANT
+Library was NOT tested with IIS. Library was tested in console applications and with Kesterl web server. 
+
 ### 
 
 ### Basic converter
