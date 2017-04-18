@@ -9,6 +9,8 @@ Library can be installed through Nuget. Run command bellow from the package mana
 PM> Install-Package DinkToPdf
 ```
 
+Copy native library to root folder of your project. From there .NET Core loads native library when native method is called with P/Invoke. You can find latest version of native library [here](https://github.com/rdvojmoc/DinkToPdf/tree/master/v0.12.4)
+
 ### IMPORTANT
 Library was NOT tested with IIS. Library was tested in console applications and with Kestrel web server both for Web Application and Web API . 
 
