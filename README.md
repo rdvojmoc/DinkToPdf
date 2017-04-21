@@ -55,7 +55,7 @@ var doc = new HtmlToPdfDocument()
 ### Convert
 If Out property is empty string (defined in GlobalSettings) result is saved in byte array. 
 ```csharp
-byte[] pdf = _converter.Convert(doc);
+byte[] pdf = converter.Convert(doc);
 ```
 
 If Out property is defined in document then file is saved to disk:
@@ -78,7 +78,7 @@ var doc = new HtmlToPdfDocument()
 };
 ```
 ```csharp
-_converter.Convert(doc);
+converter.Convert(doc);
 ```
 
 ### Dependancy injection
