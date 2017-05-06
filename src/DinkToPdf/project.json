@@ -4,7 +4,25 @@
   "buildOptions": {
     "allowUnsafe": true,
     "xmlDoc": true,
-    "nowarn": [ "1591" ]
+    "nowarn": [ "1591" ],
+    "copyToOutput": {
+      "mappings": {
+        "32 bit/": {
+          "includeFiles": [
+            "../../v0.12.4/32 bit/libwkhtmltox.dll",
+            "../../v0.12.4/32 bit/libwkhtmltox.dylib",
+            "../../v0.12.4/32 bit/libwkhtmltox.so"
+          ]
+        },
+        "64 bit/": {
+          "includeFiles": [
+            "../../v0.12.4/64 bit/libwkhtmltox.dll",
+            "../../v0.12.4/64 bit/libwkhtmltox.dylib",
+            "../../v0.12.4/64 bit/libwkhtmltox.so"
+          ]
+        }
+      }
+    }
   },
 
   "dependencies": {
@@ -32,6 +50,20 @@
             "bin/Debug/netstandard1.6/DinkToPdf.pdb",
             "bin/Debug/netstandard1.6/DinkToPdf.xml",
             "bin/Debug/netstandard1.6/DinkToPdf.dll"
+          ]
+        },
+        "lib/netstandard1.6/32 bit/": {
+          "includeFiles": [
+            "../../v0.12.4/32 bit/libwkhtmltox.dll",
+            "../../v0.12.4/32 bit/libwkhtmltox.dylib",
+            "../../v0.12.4/32 bit/libwkhtmltox.so"
+          ]
+        },
+        "lib/netstandard1.6/64 bit/": {
+          "includeFiles": [
+            "../../v0.12.4/64 bit/libwkhtmltox.dll",
+            "../../v0.12.4/64 bit/libwkhtmltox.dylib",
+            "../../v0.12.4/64 bit/libwkhtmltox.so"
           ]
         }
       }
