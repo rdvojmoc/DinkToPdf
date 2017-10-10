@@ -82,7 +82,7 @@ converter.Convert(doc);
 ```
 
 ### Dependancy injection
-Register converter as singleton.
+Converter must be registered as singleton.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
