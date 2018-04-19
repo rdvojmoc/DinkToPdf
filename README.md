@@ -81,7 +81,7 @@ var doc = new HtmlToPdfDocument()
 converter.Convert(doc);
 ```
 
-### Dependancy injection
+### Dependency injection
 Converter must be registered as singleton.
 
 ```csharp
