@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <VersionPrefix>1.0.9</VersionPrefix>
+    <VersionSuffix>netcore2.1-wkhtmltopdf-v0.12.5</VersionSuffix>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>DinkToPdf</AssemblyName>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <!--NuGet -->
+  <PropertyGroup>
+    <PackageId>DinkToPdf</PackageId>
+    <Description>.NET Core P/Invoke wrapper for wkhtmltopdf library that uses Webkit engine to convert HTML pages to PDF.</Description>
+    <Copyright>Copyright 2017</Copyright>
+    <Authors>Rok Dvojmoč</Authors>
+    <PackageProjectUrl>https://github.com/rdvojmoc/DinkToPdf</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rdvojmoc/DinkToPdf</RepositoryUrl>
+    <IncludeBuildOutput>true</IncludeBuildOutput>
+    <IncludeSymbols>true</IncludeSymbols>
+    <PackageTags>wkhtmltopdf;netstandard;html;pdf;wrapper</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\v0.12.5\32 bit\libwkhtmltox.dll">
+      <Pack>true</Pack>
+      <PackagePath>runtimes\win-x86\native</PackagePath>
+    </Content>
+    <Content Include="..\..\v0.12.5\64 bit\libwkhtmltox.dll">
+      <Pack>true</Pack>
+      <PackagePath>runtimes\win-x64\native</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\v0.12.4\32 bit\libwkhtmltox.dylib">
+      <Pack>true</Pack>
+      <PackagePath>runtimes\osx-x86\native</PackagePath>
+    </Content>
+    <Content Include="..\..\v0.12.4\32 bit\libwkhtmltox.so">
+      <Pack>true</Pack>
+      <PackagePath>runtimes\linux-x86\native</PackagePath>
+    </Content>
+    <Content Include="..\..\v0.12.4\64 bit\libwkhtmltox.dylib">
+      <Pack>true</Pack>
+      <PackagePath>runtimes\osx-x64\native</PackagePath>
+    </Content>
+    <Content Include="..\..\v0.12.4\64 bit\libwkhtmltox.so">
+      <Pack>true</Pack>
+      <PackagePath>runtimes\linux-x64\native</PackagePath>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Collections.Concurrent" Version="4.3.0" />
+    <PackageReference Include="System.Globalization" Version="4.3.0" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.5.1" />
+    <PackageReference Include="System.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.InteropServices" Version="4.3.0" />
+    <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
