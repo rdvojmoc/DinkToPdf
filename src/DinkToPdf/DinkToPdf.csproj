@@ -15,12 +15,15 @@
 
   <!--NuGet -->
   <PropertyGroup>
-    <PackageId>DinkToPdf</PackageId>
-    <Description>.NET Core P/Invoke wrapper for wkhtmltopdf library that uses Webkit engine to convert HTML pages to PDF.</Description>
+    <PackageId>DinkToPdf_netstandard20</PackageId>
+    <Description>
+      .NET Core P/Invoke wrapper for wkhtmltopdf library that uses Webkit engine to convert HTML pages to PDF. 
+      Upgraded to .NET Standard 2.0, .NET Core 2.1, Windows wkhtmltopdf v0.12.5
+    </Description>
     <Copyright>Copyright 2017</Copyright>
-    <Authors>Rok Dvojmoč</Authors>
+    <Authors>Rok Dvojmoč, upgraded by Chris Bryden</Authors>
     <PackageProjectUrl>https://github.com/rdvojmoc/DinkToPdf</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/rdvojmoc/DinkToPdf</RepositoryUrl>
+    <RepositoryUrl>https://github.com/rndusr0/DinkToPdf</RepositoryUrl>
     <IncludeBuildOutput>true</IncludeBuildOutput>
     <IncludeSymbols>true</IncludeSymbols>
     <PackageTags>wkhtmltopdf;netstandard;html;pdf;wrapper</PackageTags>
