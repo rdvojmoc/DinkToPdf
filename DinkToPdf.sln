@@ -33,6 +33,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "64 bit", "64 bit", "{430BDB
 		v0.12.4\64 bit\libwkhtmltox.so = v0.12.4\64 bit\libwkhtmltox.so
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "v0.12.5", "v0.12.5", "{A4C6EC8F-A046-4A3C-84DC-C36FDE7EBEF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "64 bit", "64 bit", "{81D69B39-2A45-4385-B763-EE576BFB490E}"
+	ProjectSection(SolutionItems) = preProject
+		v0.12.5\64 bit\libwkhtmltox.dll = v0.12.5\64 bit\libwkhtmltox.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "32 bit", "32 bit", "{8068782D-C43A-45CE-84DE-4D8EF48C2FB0}"
+	ProjectSection(SolutionItems) = preProject
+		v0.12.5\32 bit\libwkhtmltox.dll = v0.12.5\32 bit\libwkhtmltox.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +115,8 @@ Global
 		{51C8A18A-B165-4EF4-80BC-2EA841974607} = {54EA27C3-173F-43E1-B8B3-134DA04982E7}
 		{8762056E-19B5-480C-AD27-B7B0F31DB5EC} = {C5436272-B7E7-4E53-9EA5-58ACEF485C30}
 		{430BDB9E-886B-4669-A810-0B704CE2ABFF} = {C5436272-B7E7-4E53-9EA5-58ACEF485C30}
+		{8068782D-C43A-45CE-84DE-4D8EF48C2FB0} = {A4C6EC8F-A046-4A3C-84DC-C36FDE7EBEF9}
+		{81D69B39-2A45-4385-B763-EE576BFB490E} = {A4C6EC8F-A046-4A3C-84DC-C36FDE7EBEF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF21910C-CB67-45ED-9CB8-B5D1C1C31E1E}
