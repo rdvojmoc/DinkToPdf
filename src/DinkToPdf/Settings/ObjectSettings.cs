@@ -47,6 +47,8 @@ namespace DinkToPdf
 
         public string HtmlContent { get; set; }
 
+        public Encoding Encoding { get; set; }
+
         private WebSettings webSettings = new WebSettings();
 
         public WebSettings WebSettings {
@@ -82,7 +84,12 @@ namespace DinkToPdf
                 return new byte[0];
             }
 
-            return Encoding.UTF8.GetBytes(HtmlContent);
+            if (Encoding == null)
+            {
+                Encoding = Encoding.UTF8;
+            }
+
+            return Encoding.GetBytes(HtmlContent);
         }
     }
 }
