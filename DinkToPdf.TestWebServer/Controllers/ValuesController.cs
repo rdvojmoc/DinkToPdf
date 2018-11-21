@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DinkToPdf.Contracts;
 using Microsoft.AspNetCore.Mvc;
-using DinkToPdf.Contracts;
-using System.IO;
 
 namespace DinkToPdf.TestWebServer.Controllers
 {
     [Route("api/[controller]")]
-    public class ConvertController : Controller
+    public class ValuesController : Controller
     {
         private IConverter _converter;
 
-        public ConvertController(IConverter converter)
+        public ValuesController(IConverter converter)
         {
             _converter = converter;
         }
