@@ -18,14 +18,15 @@
     <PackageId>RndUsr0.DinkToPdf</PackageId>
     <Description>
       .NET Core P/Invoke wrapper for wkhtmltopdf library that uses Webkit engine to convert HTML pages to PDF. 
-        - Upgraded to .NET Standard 2.0, .NET Core 2.1, wkhtmltopdf v0.12.5
-        - Fix sporadic 'A callback was made on a garbage collected delegate' bug
+      Upgraded to .NET Standard 2.0, .NET Core 2.1, wkhtmltopdf v0.12.5.
+      Fixed sporadic 'A callback was made on a garbage collected delegate' bug.
     </Description>
     <Copyright>Copyright 2017</Copyright>
     <License>MIT</License>
-    <Authors>Rok Dvojmoč, Chris Bryden</Authors>
+    <Owners>Rok Dvojmoč</Owners>
+    <Authors>Rok Dvojmoč, Chris Bryden (updates and bugfixes)</Authors>
     <PackageProjectUrl>https://github.com/rdvojmoc/DinkToPdf</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/rdvojmoc/DinkToPdf/blob/master/LICENSE</PackageLicenseUrl>    
+    <PackageLicenseUrl>https://raw.githubusercontent.com/rdvojmoc/DinkToPdf/master/LICENSE</PackageLicenseUrl>    
     <RepositoryUrl>https://github.com/rndusr0/DinkToPdf</RepositoryUrl>
     <IncludeBuildOutput>true</IncludeBuildOutput>
     <IncludeSymbols>true</IncludeSymbols>
