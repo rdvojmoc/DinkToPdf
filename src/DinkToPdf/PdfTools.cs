@@ -12,12 +12,16 @@ namespace DinkToPdf
     {
         public bool IsLoaded { get; private set; }
 
+        //used to maintain a reference to delegates to prevent them being garbage collected...
+        private List<object> _Delegates = new List<object>();
+
         public PdfTools()
         {
             IsLoaded = false;
         }
-        
-        public void Load() {
+
+        public void Load()
+        {
 
             if (IsLoaded)
             {
@@ -55,7 +59,7 @@ namespace DinkToPdf
             //default const char * size is 2048 bytes 
             byte[] buffer = new byte[2048];
 
-            fixed (byte* tempBuffer = buffer  )
+            fixed (byte* tempBuffer = buffer)
             {
                 WkHtmlToXBindings.wkhtmltopdf_get_global_setting(settings, name, tempBuffer, buffer.Length);
             }
@@ -118,7 +122,7 @@ namespace DinkToPdf
 
         public void DestroyConverter(IntPtr converter)
         {
-             WkHtmlToXBindings.wkhtmltopdf_destroy_converter(converter);
+            WkHtmlToXBindings.wkhtmltopdf_destroy_converter(converter);
         }
 
         public byte[] GetConversionResult(IntPtr converter)
@@ -134,26 +138,31 @@ namespace DinkToPdf
 
         public int SetPhaseChangedCallback(IntPtr converter, VoidCallback callback)
         {
+            _Delegates.Add(callback);
             return WkHtmlToXBindings.wkhtmltopdf_set_phase_changed_callback(converter, callback);
         }
 
         public int SetProgressChangedCallback(IntPtr converter, VoidCallback callback)
         {
+            _Delegates.Add(callback);
             return WkHtmlToXBindings.wkhtmltopdf_set_progress_changed_callback(converter, callback);
         }
 
         public int SetFinishedCallback(IntPtr converter, IntCallback callback)
         {
+            _Delegates.Add(callback);
             return WkHtmlToXBindings.wkhtmltopdf_set_finished_callback(converter, callback);
         }
 
         public int SetWarningCallback(IntPtr converter, StringCallback callback)
         {
+            _Delegates.Add(callback);
             return WkHtmlToXBindings.wkhtmltopdf_set_warning_callback(converter, callback);
         }
 
         public int SetErrorCallback(IntPtr converter, StringCallback callback)
         {
+            _Delegates.Add(callback);
             return WkHtmlToXBindings.wkhtmltopdf_set_error_callback(converter, callback);
         }
 

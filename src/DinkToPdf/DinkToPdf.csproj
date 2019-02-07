@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <VersionPrefix>1.0.9</VersionPrefix>
-    <VersionSuffix>netcore2.1-wkhtmltopdf-v0.12.5</VersionSuffix>
+    <VersionSuffix>20190207.1+netstandard-2.0-netcore-2.1-wkhtmltopdf-0.12.5</VersionSuffix>
     <TargetFramework>netstandard2.0</TargetFramework>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -15,18 +15,21 @@
 
   <!--NuGet -->
   <PropertyGroup>
-    <PackageId>DinkToPdf_netstandard20</PackageId>
+    <PackageId>RndUsr0.DinkToPdf</PackageId>
     <Description>
       .NET Core P/Invoke wrapper for wkhtmltopdf library that uses Webkit engine to convert HTML pages to PDF. 
-      Upgraded to .NET Standard 2.0, .NET Core 2.1, Windows wkhtmltopdf v0.12.5
+        - Upgraded to .NET Standard 2.0, .NET Core 2.1, wkhtmltopdf v0.12.5
+        - Fix sporadic 'A callback was made on a garbage collected delegate' bug
     </Description>
     <Copyright>Copyright 2017</Copyright>
-    <Authors>Rok Dvojmoč, upgraded by Chris Bryden</Authors>
+    <License>MIT</License>
+    <Authors>Rok Dvojmoč, Chris Bryden</Authors>
     <PackageProjectUrl>https://github.com/rdvojmoc/DinkToPdf</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/rdvojmoc/DinkToPdf/blob/master/LICENSE</PackageLicenseUrl>    
     <RepositoryUrl>https://github.com/rndusr0/DinkToPdf</RepositoryUrl>
     <IncludeBuildOutput>true</IncludeBuildOutput>
     <IncludeSymbols>true</IncludeSymbols>
-    <PackageTags>wkhtmltopdf;netstandard;html;pdf;wrapper</PackageTags>
+    <PackageTags>wkhtmltopdf;netstandard;netcore;html;pdf;wrapper</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
@@ -40,19 +43,19 @@
       <PackagePath>runtimes\win-x64\native</PackagePath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\v0.12.4\32 bit\libwkhtmltox.dylib">
+    <Content Include="..\..\v0.12.5\32 bit\libwkhtmltox.dylib">
       <Pack>true</Pack>
       <PackagePath>runtimes\osx-x86\native</PackagePath>
     </Content>
-    <Content Include="..\..\v0.12.4\32 bit\libwkhtmltox.so">
+    <Content Include="..\..\v0.12.5\32 bit\libwkhtmltox.so">
       <Pack>true</Pack>
       <PackagePath>runtimes\linux-x86\native</PackagePath>
     </Content>
-    <Content Include="..\..\v0.12.4\64 bit\libwkhtmltox.dylib">
+    <Content Include="..\..\v0.12.5\64 bit\libwkhtmltox.dylib">
       <Pack>true</Pack>
       <PackagePath>runtimes\osx-x64\native</PackagePath>
     </Content>
-    <Content Include="..\..\v0.12.4\64 bit\libwkhtmltox.so">
+    <Content Include="..\..\v0.12.5\64 bit\libwkhtmltox.so">
       <Pack>true</Pack>
       <PackagePath>runtimes\linux-x64\native</PackagePath>
     </Content>

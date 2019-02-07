@@ -58,6 +58,7 @@ namespace DinkToPdf
             }
 
             Tools.DestroyConverter(converter);
+            ProcessingDocument = null;
 
             return result;
         }
