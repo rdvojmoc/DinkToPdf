@@ -3,9 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.28711.60
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{96268FD4-5328-4959-8934-D5158ED9153D}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{54EA27C3-173F-43E1-B8B3-134DA04982E7}"
 EndProject
@@ -18,15 +15,30 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DinkToPfd.TestConsoleApp", "DinkToPfd.TestConsoleApp\DinkToPfd.TestConsoleApp.csproj", "{51C8A18A-B165-4EF4-80BC-2EA841974607}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "v0.12.5", "v0.12.5", "{A4C6EC8F-A046-4A3C-84DC-C36FDE7EBEF9}"
+	ProjectSection(SolutionItems) = preProject
+		v0.12.5\LICENSE = v0.12.5\LICENSE
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "64 bit", "64 bit", "{81D69B39-2A45-4385-B763-EE576BFB490E}"
 	ProjectSection(SolutionItems) = preProject
 		v0.12.5\64 bit\libwkhtmltox.dll = v0.12.5\64 bit\libwkhtmltox.dll
+		v0.12.5\64 bit\libwkhtmltox.dylib = v0.12.5\64 bit\libwkhtmltox.dylib
+		v0.12.5\64 bit\libwkhtmltox.so = v0.12.5\64 bit\libwkhtmltox.so
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "32 bit", "32 bit", "{8068782D-C43A-45CE-84DE-4D8EF48C2FB0}"
 	ProjectSection(SolutionItems) = preProject
 		v0.12.5\32 bit\libwkhtmltox.dll = v0.12.5\32 bit\libwkhtmltox.dll
+		v0.12.5\32 bit\libwkhtmltox.dylib = v0.12.5\32 bit\libwkhtmltox.dylib
+		v0.12.5\32 bit\libwkhtmltox.so = v0.12.5\32 bit\libwkhtmltox.so
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DB9A45C9-C07B-4CCE-A544-1078E98A0776}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
