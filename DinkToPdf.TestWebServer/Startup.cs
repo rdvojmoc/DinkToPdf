@@ -22,12 +22,6 @@ namespace DinkToPdf.TestWebServer
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
-            if (env.IsEnvironment("Development"))
-            {
-                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
-                builder.AddApplicationInsightsSettings(developerMode: true);
-            }
-
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
         }
@@ -38,9 +32,7 @@ namespace DinkToPdf.TestWebServer
         public void ConfigureServices(IServiceCollection services)
         {
             // Add converter to DI
-            services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
-            // Add framework services.
-            services.AddApplicationInsightsTelemetry(Configuration);
+            services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));          
 
             services.AddMvc();
         }
@@ -51,9 +43,6 @@ namespace DinkToPdf.TestWebServer
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseApplicationInsightsRequestTelemetry();
-
-            app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseMvc();
         }
