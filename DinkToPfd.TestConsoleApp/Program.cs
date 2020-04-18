@@ -40,7 +40,7 @@ namespace DinkToPdf.ConsoleApp
                     }
                 }
             };
-            
+
             byte[] pdf = converter.Convert(doc);
 
             if (!Directory.Exists("Files"))
@@ -52,7 +52,7 @@ namespace DinkToPdf.ConsoleApp
             {
                 stream.Write(pdf, 0, pdf.Length);
             }
-           
+
             Console.ReadKey();
         }
 
