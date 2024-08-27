@@ -63,6 +63,8 @@ namespace DinkToPdf
                         Name = "wkhtmltopdf worker thread"
                     };
 
+                    // This is to fix issue https://github.com/rdvojmoc/DinkToPdf/issues/119
+                    conversionThread.SetApartmentState(ApartmentState.STA);
                     kill = false;
 
                     conversionThread.Start();
