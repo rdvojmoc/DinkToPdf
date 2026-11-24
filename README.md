@@ -91,3 +91,27 @@ public void ConfigureServices(IServiceCollection services)
     services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 }
 ```
+
+### A maintained package that runs without libwkhtmltox
+
+This library loads `libwkhtmltox`, whose last official Linux packages include
+May 2023 builds for Ubuntu 22.04 and Debian 12. A missing library or dependency
+can cause `Unable to load shared library 'libwkhtmltox.so'`. A library built
+for a different CPU can cause `System.BadImageFormatException`.
+
+`Marqius.DinkToPdf` is a drop-in: all of DinkToPdf 1.0.8's API, compared line
+by line with the original on every build, and even the raw
+`WkHtmlToXBindings` calls work — but there is no native library to install.
+Apps already compiled against DinkToPdf load it unchanged.
+
+```bash
+dotnet add package Marqius.DinkToPdf
+```
+
+On the same GitHub Linux machine, the same invoice: 7 ms per PDF where
+libwkhtmltox takes 212 ms, 265 PDFs a second against 4.7, 23 MB of server
+space against 45 MB. The benchmark is reproducible from
+https://github.com/marqiushq/marqius-wkhtmltopdf-dotnet
+
+The Community licence is free for personal and open-source projects;
+businesses need a commercial licence.
